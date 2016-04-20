@@ -1,0 +1,33 @@
+#datetime #date {
+  font-size: 55%;
+  color: #AAAAAA;
+}
+
+#datetime ul#time {
+  margin: 0px;
+  padding: 0px;
+
+  list-style: none;
+  text-align: center;
+}
+
+#datetime ul#time li {
+  display: inline;
+
+  margin: 0px;
+  padding: 0px;
+
+  text-align: center;
+}
+
+#datetime ul#time li#seconds {
+  vertical-align: super;
+
+  font-size: 50%;
+  font-weight: lighter;
+}
+
+#clock {
+  width: 400px;
+  height: 400px;
+}

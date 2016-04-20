@@ -1,0 +1,19 @@
+
+#videoplayer-widget{
+    font-size: 25%;
+    color: #AAAAAA;
+}
+
+#resizeicon, #playpauseicon{
+    width:100px;
+    height:100px;
+    padding-left:20px;
+}
+
+#controls{
+   text-align:center; 
+}
+
+#position{
+    width:100%;
+}

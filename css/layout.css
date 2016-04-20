@@ -1,0 +1,62 @@
+html, body {
+  background-color: #000000;
+
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+
+  font-family: Roboto, Arial, Sans-serif;
+  color: #FFFFFF;
+  font-size: 100px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.top, .vcenter, .bottom, .left, .hcenter, .right {
+  position: absolute;
+}
+
+.top {
+  top: 50px;
+}
+
+.vcenter {
+  top: 50%;
+  margin-top: -250px; /* Adjust depending on display resolution */
+  margin-bottom: -250px; /* Adjust depending on display resolution */
+}
+
+.bottom {
+  bottom: 50px;
+}
+
+.left, .right {
+  max-width: 450px; /* Adjust depending on display resolution */
+  width:250px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.left {
+  left: 50px;
+}
+
+.hcenter {
+  left: 50px;
+  right: 50px;
+
+  text-align: center;
+}
+
+.right {
+  right: 50px;
+}
+
+.widget-heading {
+  font-size: 30%;
+}
+
+.widget-detail {
+  font-size: 25%;
+  color: #AAAAAA;
+}

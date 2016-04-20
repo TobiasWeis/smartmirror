@@ -1,0 +1,67 @@
+#weather-current {
+  font-size: 30%;
+  color: #AAAAAA;
+}
+
+#weather-current table {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#weather-current .weather-filler {
+  width: 50px;
+}
+
+#weather-current .weather-sunrise-sunset {
+  font-size: 50%;
+}
+
+#weather-current .weather-sunrise-sunset .weather-filler {
+  width: 20px;
+}
+
+#weather-forecast {
+  font-size: 40%;
+}
+
+#weather-forecast td {
+  padding-bottom: 10px;
+}
+
+.weather-city {
+  padding-left: 0px;
+}
+
+.weather-icon {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.weather-temp {
+  padding-right: 10px;
+}
+
+.weather-temp-minmax {
+  font-size: 40%;
+}
+
+.weather-temp-minmax  .weather-temp-max {
+  /* TODO color: #880000; */
+}
+
+.weather-temp-minmax  .weather-temp-min {
+  /* TODO color: #000088; */
+}
+
+.weather-humidity-clouds {
+  font-size: 40%;
+}
+
+.weather-humidity-clouds .weather-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  font-size: 80%;
+}
+
+

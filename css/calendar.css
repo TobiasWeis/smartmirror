@@ -1,0 +1,38 @@
+#calendar-authorization {
+  display: none;
+
+  color: #FF0000;
+}
+
+#calendar-authorization button#calendar-authorization-button {
+  background-color: #000000;
+
+  border-color: #FF0000;
+  border-width: 5px;
+  border-style: solid;
+
+  color: #FF0000;
+}
+
+#calendar-events {
+}
+
+#calendar-events table {
+  width: 100%;
+  max-width: inherit;
+
+  table-layout: fixed;
+}
+
+#calendar-events tr td.date, #calendar-events tr td.weekday {
+  width: 25%;
+  text-align: right;
+}
+
+#calendar-events tr td.summary, #calendar-events tr td.startend {
+  padding-left: 20px;
+
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

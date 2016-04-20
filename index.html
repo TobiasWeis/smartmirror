@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home: Smart Mirror</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/videoplayer.css" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="css/datetime.css" />
+    <link rel="stylesheet" type="text/css" href="css/publictransport.css" />
+    <link rel="stylesheet" type="text/css" href="css/weather.css" />
+    <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/lib/moment-with-locales-2.10.6.min.js"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+
+    <script type="text/javascript" src="js/mousetrap.js"></script>
+
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/helper.js"></script>
+    <script type="text/javascript" src="js/sensor.js"></script>
+    <script type="text/javascript" src="js/bitcoin.js"></script>
+
+    <!-- <script type="text/javascript" src="js/calendar.js"></script> -->
+    <script type="text/javascript" src="js/datetime.js"></script>
+    <!-- <script type="text/javascript" src="js/publictransport.js"></script> -->
+    <script type="text/javascript" src="js/weather.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // globally set the locale
+        moment.locale(config.lang);
+
+        // load the proper language
+        $.getScript('lang/' + config.lang + '.js');
+
+        // start all widgets
+        datetime.start();
+        // calendar.start();
+        weather.start();
+        videoplayer.start();
+        //sensor.start();
+        bitcoin.start();
+        // publictransport.start();
+
+        Mousetrap.bind('left', function(){
+            videoplayer.toggle_size();
+        });
+
+        Mousetrap.bind('right', function(){
+            videoplayer.toggle_play() ;
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <div class="top hcenter">
+      <div id="datetime">
+        <div id="date"></div>
+        <ul id="time">
+          <li id="hoursminutes"></li>
+          <li id="seconds"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vcenter left">
+      <div id="weather-forecast"></div>
+    </div>
+
+    <div class="vcenter hcenter">
+    </div>
+
+    <div class="vcenter right">
+      <div id="videoplayer-widget"></div>
+    </div>
+
+    <div class="bottom left">
+      <div style="font-size:18pt;"><span style="background-color:#ff0000">>_</span> schm0ka</div>
+      <div id="publictransport-stationboard"></div>
+    </div>
+
+    <div class="bottom hcenter">
+      <div id="weather-current"></div>
+    </div>
+
+    <div class="bottom right">
+        <div id="bitcoin-widget" class="widget-detail"></div>
+      <div id="calendar-authorization" class="widget-heading">
+        <button id="calendar-authorization-button" onclick="calendar.google.handleAuthClick(event)">Authorize Google Calendar</button>
+      </div>
+      <div id="calendar-events"></div>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 This repo contains the necessary www-files and scripts for my Smart(er) Mirror project:
-![alt tag](smartmirror.png)
+![SmartMirror](http://blog.tobias-weis.de/wp-content/uploads/2016/04/watermarked_DSC_0731.jpg)
 
 More details of the project can be found at http://blog.tobias-weis.de
 

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/sarah/scripts/rotate_display.sh
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=RotateDisplay
+Name=RotateDisplay
+Comment[en_US]=
+Comment=

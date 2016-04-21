@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/sarah/scripts/motionsensing.py
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Motionsensing
+Name=Motionsensing
+Comment[en_US]=
+Comment=

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=chromium --disable --no-first-run --incognito --disable-translate --disable-infobars --disable-suggestions-service --disable-save-password-bubble --disk-cache-dir=$CHROMIUM_TEMP/cache/ --user-data-dir=$CHROMIUM_TEMP/user_data/ --start-maximized --kiosk "http://localhost/smartmirror/"
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=chrome smartmirror kiosk
+Name=chrome smartmirror kiosk
+Comment[en_US]=
+Comment=

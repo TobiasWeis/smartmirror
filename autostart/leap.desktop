@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=sudo /home/sarah/scripts/TobisControl/TobisControl.py
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=LeapMotionPythonBridge
+Name=LeapMotionPythonBridge
+Comment[en_US]=
+Comment=

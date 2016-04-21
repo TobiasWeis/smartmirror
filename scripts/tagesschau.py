@@ -7,6 +7,7 @@ get the right link and download the video
 from BeautifulSoup import BeautifulSoup
 import urllib2
 import re
+import os
 
 url = "https://www.tagesschau.de/100sekunden/"
 
@@ -20,5 +21,7 @@ for link in soup.findAll('a'):
             import urllib
             test=urllib.FancyURLopener()
             test.retrieve(target,"/var/www/smartmirror2/tagesschau.mp4")
+            # reload the webpage in chrome
+            os.system("export DISPLAY=:0 && xdotool key F5")
 
 

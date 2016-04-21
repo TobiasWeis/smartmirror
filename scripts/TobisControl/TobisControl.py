@@ -62,8 +62,6 @@ class SampleListener(Leap.Listener):
             ppos = np.array([[hand.palm_position[0], hand.palm_position[1], hand.palm_position[2]]])
             self.myhands[hand.id]["coords"] = np.append(self.myhands[hand.id]["coords"], ppos, axis=0)
 
-            # FIXME: clean up dict from time to time !
-
             # SWIPE STUFF
             x_move = np.sum(np.diff(self.myhands[hand.id]["coords"][-20:, 0]))
             z_move = np.sum(np.diff(self.myhands[hand.id]["coords"][-20:, 1]))

@@ -12,7 +12,7 @@ import serial
 import time
 import os
 
-_keep_on_min = 5 # number of minutes 
+_keep_on_min = 10 # number of minutes 
 
 ser = serial.Serial()
 ser.baudrate = 9600
@@ -34,8 +34,13 @@ while True:
         last_move = time.time()
 
     if "0" not in res and state == 0:
+        # reload the website, to show tagesschau from beginning again
+        os.system("export DISPLAY=:0 && xdotool key F5")
+
         print "[", time.time(), "] Turning on!"
         os.system("echo \"as 1\" | cec-client -s")
         last_move = time.time()
+
+
         state = 1
 ser.close()

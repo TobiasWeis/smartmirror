@@ -15,12 +15,22 @@ And the Leap-Motion-SDK: https://developer.leapmotion.com/v2
 Currently, you can NOT use this code as is, but have to move the directories
 to suited locations and edit the scripts (maybe a Makefile will be provided later on).
 
-# www
+## www (move/link to /var/www/smartmirror)
 This code has been mostly taken from http://github.com/Montellese/home-smart-mirror.git,
 but due to my changes to the index-file I did not place a pull request and instead forked my own branch.
 
 - For the weather, get an API key for openweathermap, then put it in js/config.js
 - For the bitcoin api, get an API key from bitcoin.de, and put it in php/get_bitcoin.php
+
+## scripts (put to a suitable location)
+If you are not on a x86_64 system, you have to download and put the necessary Leap-Libraries in TobisControl yourself.
+rotate_display is only needed if you need to change the rotation of your display.
+
+Create a cronjob for the Tagesschau (crontab -e) and edit the destination folder in the tagesschau-script:
+00 06 * * * /home/sarah/scripts/tagesschau.py > /dev/null 2>&1
+
+## autostart (put files in ~/.config/autostart)
+These work with GNOME, I do not know about other managers..
 
 ## Original README.md
 ## Home: Smart Mirror

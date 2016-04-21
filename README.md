@@ -8,6 +8,13 @@ More details of the project can be found at http://blog.tobias-weis.de
 - scripts contains necessary programs that run via autostart or cronjob
 - autostart contains .desktop-files that I used to autostart the scripts 
 
+Needed packages:
+apache2 libapache2-mod-php5 xdotools 
+And the Leap-Motion-SDK: https://developer.leapmotion.com/v2
+
+Currently, you can NOT use this code as is, but have to move the directories
+to suited locations and edit the scripts (maybe a Makefile will be provided later on).
+
 # www
 This code has been mostly taken from http://github.com/Montellese/home-smart-mirror.git,
 but due to my changes to the index-file I did not place a pull request and instead forked my own branch.
@@ -15,8 +22,8 @@ but due to my changes to the index-file I did not place a pull request and inste
 - For the weather, get an API key for openweathermap, then put it in js/config.js
 - For the bitcoin api, get an API key from bitcoin.de, and put it in php/get_bitcoin.php
 
-# Original README.md
-# Home: Smart Mirror
+## Original README.md
+## Home: Smart Mirror
 Home: Smart Mirror is a web frontend for a smart mirror written in HTML, CSS and JavaScript. It supports a very basic configuration, localization and a few widgets.
 
 ## Configuration

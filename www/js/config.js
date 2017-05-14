@@ -34,7 +34,7 @@ var config = {
 
     openweathermap: {
       apiVersion: "2.5",
-      apiKey: "INSERT YOUR API KeY !",
+      apiKey: "76273a8ae6713619f0317846e667b77d",
       cities: [
         {
           name: "Frankfurt am Main",

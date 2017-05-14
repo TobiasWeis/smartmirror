@@ -34,34 +34,60 @@
 \title[Intro]{Introduction}
 
 \begin{frame}
-	\title[Intro]{Introduction}
+  {TOC}
 
   Building a smarter Smartmirror
 
   \begin{itemize}
-  \item Smarter Smartmirror
-  \item Requirements
-  \item Hardware
-  \item Software
+  \item \textbf{Smarter Smartmirror - Motivation}
+  \item Requirements, mapping to hard- and software
+  \item Implementation and choices
+  \item Complete System
+  \item Result and TODOs  
   \end{itemize}
 \end{frame}
 
 \begin{frame}
 	{Smarter Smartmirror}
-	\begin{tabular}{cl}  
-         \begin{tabular}{c}
-           %\includegraphics[height=5cm, width=3.5cm]{horner}
-           \includegraphics[width=.5\linewidth]{images/mirror_complete}
-           \end{tabular}
-           & \begin{tabular}{l}
-             \parbox{0.4\linewidth}{%  change the parbox width as appropiate
-             \textbf{Motivation:} Satisfy daily need of information in an unobtrusive way,
-             without holding a device or sacrificing time:
-			 Extend the bathroom mirror to both mirror your face and display information!
-             While brushing the teeth you cannot do anything else anyway!
-    		}
-         \end{tabular}  \\
-	\end{tabular}
+
+    \begin{block}{Motivation}Satisfy daily need of information in an unobtrusive way,\\
+    	 without holding a device or sacrificing time:\\
+		 Extend the bathroom mirror to both mirror your face and display information!
+	\end{block}
+	
+		\begin{tabular}{cl}  
+			\parbox{0.6\linewidth}{
+				\includegraphics[width=\linewidth]{images/mirror_complete}
+				}
+		&
+			\parbox{0.3\linewidth}{
+		    	While brushing teeth you cannot do anything else anyway..
+		    	}
+		  \end{tabular}
+\end{frame}
+
+\begin{frame}
+	{Usecases}
+	\begin{enumerate}
+		\item Show general information (time, weather)
+		\item Show user-specific information (calendar)
+			\includegraphics[width=0.5\linewidth]{images/facerecog.png}\\
+		\item Start/stop video/music playback
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  {TOC}
+
+  Building a smarter Smartmirror
+
+  \begin{itemize}
+  \item Smarter Smartmirror - Motivation
+  \item \textbf{Requirements, mapping to hard- and software}
+  \item Implementation and choices
+  \item Complete System
+  \item Result and TODOs  
+  \end{itemize}
 \end{frame}
 
 \section{Requirements}
@@ -92,17 +118,6 @@
 		\item Play video news (max. 5 minutes)
 		\item Identify users to provide personalized information
 	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	{Mirror}
-	How to display information and still be a mirror?\\
-	Two-way mirrors allow light from the backside to pass through:\\
-	\vspace{0.5cm}
-	\hspace{1cm} Regular mirror \hspace{5cm} Two-way mirror
-	\includegraphics[height=4.5cm]{images/smartmirror_principle.png}
-	\hspace{1.5cm}
-	\includegraphics[height=4.5cm]{images/smartmirror_principle_2.png}
 \end{frame}
 
 \begin{frame}
@@ -152,23 +167,48 @@
 				$\rightarrow$ Speech recognition\\
 				$\rightarrow$ Facedetection $\rightarrow$ Camera\\
 				$\rightarrow$ HTML 5 (mp4-video)\\
-				$\rightarrow$ Sound output $\rightarrow$ Speakers
+				$\rightarrow$ Sound output $\rightarrow$ Speakers\\
+				
+				Consequential requirements:\\
+				LeapMotion $\rightarrow$ Powerful computer\\
+				Speech recog $\rightarrow$ Microphone
 			}
 	\end{tabular}	
 \end{frame}
 
+\begin{frame}
+  {TOC}
 
-\section{Hardware}
-\title[Hardware]{Hardware}
+  Building a smarter Smartmirror
+
+  \begin{itemize}
+  \item Smarter Smartmirror - Motivation
+  \item Requirements, mapping to hard- and software
+  \item \textbf{Implementation and choices}
+  \item Complete System
+  \item Result and TODOs
+  \end{itemize}
+\end{frame}
+
+\section{Implementation}
+\title[Implementation]{Implementation}
+
+\begin{frame}
+	{Mirror}
+	How to display information and still be a mirror?\\
+	Two-way mirrors allow light from the backside to pass through:\\
+	\vspace{0.5cm}
+	\hspace{1cm} Regular mirror \hspace{5cm} Two-way mirror
+	\includegraphics[height=4.5cm]{images/smartmirror_principle.png}
+	\hspace{1.5cm}
+	\includegraphics[height=4.5cm]{images/smartmirror_principle_2.png}
+\end{frame}
 
 \begin{frame}
 	{Requirement-mapping: Hardware}
 	\includegraphics[width=\linewidth]{images/mirror_split_color}
 \end{frame}
 
-
-\section{Software}
-\title[Software]{Software}
 
 \begin{frame}
 	{Software - GUI}
@@ -193,7 +233,7 @@
 	\begin{tabular}{cl}  
 			\parbox{0.35\linewidth}{
 				\begin{itemize}
-					\item Leap motion SDK (python)
+					\item Leap motion SDK \footnote{https://developer.leapmotion.com/} (python)
 					\item detect gestures
 					\item map to keypresses (xdotool)
 				\end{itemize}
@@ -235,7 +275,7 @@
 			\parbox{0.35\linewidth}{
 				\begin{itemize}
 					\item Voice recognition
-					\item CMU pocketsphinx (python)
+					\item CMU pocketsphinx \footnote{https://github.com/cmusphinx/pocketsphinx-python} (python)
 					\item map to keypresses (xdotool)
 				\end{itemize}
 			}&
@@ -379,6 +419,20 @@
 \end{frame}
 
 
+\begin{frame}
+  {TOC}
+
+  Building a smarter Smartmirror
+
+  \begin{itemize}
+  \item Smarter Smartmirror - Motivation
+  \item Requirements, mapping to hard- and software
+  \item Implementation and choices
+  \item \textbf{Complete System}
+  \item Result and TODOs
+  \end{itemize}
+\end{frame}
+
 \section{System}
 \title[System]{System}
 
@@ -448,6 +502,24 @@
     %\path [line,dashed] (system) |- (evaluate);
 \end{tikzpicture}	
 \end{frame}
+
+\begin{frame}
+  {TOC}
+
+  Building a smarter Smartmirror
+
+  \begin{itemize}
+  \item Smarter Smartmirror - Motivation
+  \item Requirements, mapping to hard- and software
+  \item Implementation and choices
+  \item Complete System
+  \item \textbf{Result and TODOs}
+  \end{itemize}
+\end{frame}
+
+
+\section{Result and TODOs}
+\title[Result and TODOs]{Result and TODOs}
 
 \begin{frame}
 	{Result}
